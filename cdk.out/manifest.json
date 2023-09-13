@@ -1,0 +1,106 @@
+{
+  "version": "33.0.0",
+  "artifacts": {
+    "LambdaSnsStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "LambdaSnsStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "LambdaSnsStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://981241700645/us-east-1",
+      "properties": {
+        "templateFile": "LambdaSnsStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::981241700645:role/cdk-hnb659fds-deploy-role-981241700645-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::981241700645:role/cdk-hnb659fds-cfn-exec-role-981241700645-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-981241700645-us-east-1/160ce6fbafa91ff33010e557e5bd76fcad5b79827c5e43f7977cfedc6d4a9d5c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "LambdaSnsStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::981241700645:role/cdk-hnb659fds-lookup-role-981241700645-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "LambdaSnsStack.assets"
+      ],
+      "metadata": {
+        "/LambdaSnsStack/MyLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaServiceRole4539ECB6"
+          }
+        ],
+        "/LambdaSnsStack/MyLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaCCE802FB"
+          }
+        ],
+        "/LambdaSnsStack/MyLambda/InvokePermission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaInvokePermissionED609D83"
+          }
+        ],
+        "/LambdaSnsStack/MySNSTopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MySNSTopicF6FB035B"
+          }
+        ],
+        "/LambdaSnsStack/MySNSTopic/your-email@gmail.com/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MySNSTopicyouremailgmailcom8A6483E4"
+          }
+        ],
+        "/LambdaSnsStack/EC2StartStopEventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2StartStopEventRuleEFC90D7B"
+          }
+        ],
+        "/LambdaSnsStack/EC2StartStopEventRule/AllowEventRuleLambdaSnsStackMyLambdaA9B107A4": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2StartStopEventRuleAllowEventRuleLambdaSnsStackMyLambdaA9B107A437CB5957"
+          }
+        ],
+        "/LambdaSnsStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/LambdaSnsStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/LambdaSnsStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "LambdaSnsStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
